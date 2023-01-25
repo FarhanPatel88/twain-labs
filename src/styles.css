@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    padding: 0;
+}
+
+.bg-purple {
+    background-color: rgba(103, 0, 187, 0.9);
+}
+
+.btn-purple {
+    background-color: rgba(77, 0, 139, 0.7);
+    color: #fff;
+}
+
+.button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:disabled {
+    background-color: rgba(77, 0, 139, 0.3);
+    color: #fff;
+    cursor: default;
+}
+
+.btn-purple:enabled:hover {
+    transform: scale(0.95);
+    box-shadow: 2px 4px 15px 1px rgba(65, 0, 119, 0.3);
+}
+
+.active {
+    background-color: rgba(103, 0, 187, 0.8) !important;
+    border-color: rgba(103, 0, 187, 0.9) !important;
+    border-radius: 5px !important;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
+    /* color: #fff; */
+}
+
+.list-group-item-action:focus {
+    box-shadow: inset -1px -1px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.active-link {
+    border-bottom: 1px solid #fff;
+}
+
+input.ng-invalid.ng-touched {
+    border-color: red;
+}

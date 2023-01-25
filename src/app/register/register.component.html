@@ -1,0 +1,27 @@
+<div class="row mb-3">
+    <div class="col-sm-12">
+        <h1 class="h2 fw-normal">Register to get started!</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <form #f="ngForm" (ngSubmit)="register()">
+            <div class="form-group mb-3">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" [ngModel]="username" required #usernameref="ngModel" />
+                <p *ngIf="usernameref.invalid && usernameref.touched" class="form-text">Username cannot be empty!</p>
+            </div>
+            <div class="form-group mb-3">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" [ngModel]="email" required email #emailid="ngModel" />
+                <p *ngIf="emailid.invalid && emailid.touched" class="form-text">Please Enter Valid Email Address!</p>
+            </div>
+            <div class="form-group mb-3">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" [ngModel]="password" required #passwordref="ngModel" />
+                <p *ngIf="passwordref.invalid && passwordref.touched" class="form-text">Password cannot be empty!</p>
+            </div>
+            <button type="submit" class="button btn-purple" [disabled]="f.invalid">Submit</button>
+        </form>
+    </div>
+</div>

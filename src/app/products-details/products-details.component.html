@@ -1,0 +1,10 @@
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    <div>
+        <h4 class="list-group-item-heading">{{ product.getName() }}</h4>
+        <p class="list-group-item-text">{{ product.getDescription() }}</p>
+        <button class="button btn-purple" (click)="addToCart()">Add To Cart</button>
+    </div>
+    <span>
+        <img [src]="product.getImgPath()" alt="" class="img-thumbnail" style="height: 150px" />
+    </span>
+</li>

@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand navbar-dark bg-purple mb-4 shadow">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand fw-normal" routerLink="/">Twain Labs</a>
+        </div>
+        <div *ngIf="loginStatus" class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="mx-auto me-0 d-flex">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-3" routerLinkActive="active-link">
+                        <a class="nav-link rounded-2 button btn-purple" [routerLink]="['/cart']">Cart</a>
+                    </li>
+                    <li class="nav-item" (click)="logout()"><a class="nav-link rounded-2 button btn-purple">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
